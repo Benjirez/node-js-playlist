@@ -1,17 +1,20 @@
 var express = require('express');
-var myController1 = require('./controllers/myController1');
+var controller1 = require('./controllers/controller1');
 var xsvr = express();
+
 
 //set up template engine
 xsvr.set('view engine', 'ejs');
 
+//fire controllers/route handlers - these could be defined in app.js but modularizing makes cleaner.
+controller1( xsvr ); //passing it the express server
+
+
+
 //static files
-xsvr.use( express.static('./static') ); //no specific route specified... thus, all requests routed to ./public
+xsvr.use( express.static('./static') ); //no specific route specified... thus, all requests routed to ./static
 
 
-
-//fire controllers (ie. call functions)
-myController1( xsvr ); //passing it the express server
 
 
 
