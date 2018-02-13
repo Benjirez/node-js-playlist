@@ -7,3 +7,12 @@ If you have been following the tutorial, code for each and every lesson is added
 All files have been tested.
 
 If more files for  .\Practice\ should be added. They will be added very soon.
+
+To get running on XP package.json dependencies:
+
+   "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "mongoose": "^3.8.40"
+  }
